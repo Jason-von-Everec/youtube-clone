@@ -94,6 +94,14 @@ function Header({isExpanded, setIsExpanded}){
             }
         }
     }
+
+    function handleBtn(){
+        if (searchContent.trim()){
+            navigate(`/search?query=${searchContent}`);//not big difference from URL params but this is standard convention for search engines
+        }else{
+            navigate("/");
+        } 
+    }
     return(
         <HeaderContainer>
             <MenuIcon onClick={()=>(isExpanded? setIsExpanded(false):setIsExpanded(true))}>
@@ -106,7 +114,7 @@ function Header({isExpanded, setIsExpanded}){
             <SearchBar>
                 <SearchInput type='text' placeholder='Search' value={searchContent} onChange={(e)=>{setSearchContent(e.target.value)}} onKeyDown={(e)=>handleKeyDown(e)}></SearchInput>
                 {searchContent && <CloseIcon onClick={()=>{setSearchContent("");}}/>}
-                <SearchButton>
+                <SearchButton onClick={()=>handleBtn()}>
                     <IoSearchOutline color='black' size="26px"></IoSearchOutline>
                 </SearchButton>
             </SearchBar>
