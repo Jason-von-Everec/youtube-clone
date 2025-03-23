@@ -1,0 +1,46 @@
+body {
+  background-color: #0c0c0c;
+  color: white;
+  margin: 0px;
+  width:100vw;
+  height:100vh;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Thin scrollbar, hidden until hovered */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 30px;
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+/* Scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Light-colored, transparent scrollbar */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* Show scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6); /* More visible on hover */
+}
+/*:: here doesn't mean pseudo element, it's just a syntax acting as a selector for browser like chrome or safari to change the styles of some default elements*/
+/*
+//Hide scrollbar by default (but still scrollable)
+::-webkit-scrollbar {
+  display: none;
+}
+
+//Show scrollbar when hovering over scrollable area
+:hover::-webkit-scrollbar {
+  display: block;
+}
+*/
