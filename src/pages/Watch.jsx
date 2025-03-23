@@ -21,6 +21,7 @@ const WatchContainer=styled.div`
     height: calc(100vh - 80px);
     gap:10px;
     overflow-y: auto;
+    overflow-x: hidden;
     /*
     if you want to control the scrolling event of two infinite scroll components using one main container at the same time, you need to
     give this main container a fixed height, overflow-y: auto properties and don't forget to make it the scrollableTarget of both components
